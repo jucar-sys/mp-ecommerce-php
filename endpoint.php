@@ -8,6 +8,8 @@
     <!-- -------------------- CONTENIDO ---------------------- -->
     <?php
         $resp = 'NO entró al post';
+        $data = json_decode(file_get_contents('php://input'), true);
+        $_SESSION['notify'] = $data;
         if($_POST){
 
             MercadoPago\SDK::setAccessToken(ACC_TOKEN);
@@ -16,19 +18,19 @@
             switch($_POST["type"]) {
                 case "payment":
                     $payment = MercadoPago\Payment.find_by_id($_POST["id"]);
-                    $_SESSION['notify'] = 'Entro a payments';
+                    // $_SESSION['notify'] = 'Entro a payments';
                 break;
                 case "plan":
                     $plan = MercadoPago\Plan.find_by_id($_POST["id"]);
-                    $_SESSION['notify'] = 'Entro a plan';
+                    // $_SESSION['notify'] = 'Entro a plan';
                 break;
                 case "subscription":
                     $plan = MercadoPago\Subscription.find_by_id($_POST["id"]);
-                    $_SESSION['notify'] = 'Entro a subscription';
+                    // $_SESSION['notify'] = 'Entro a subscription';
                 break;
                 case "invoice":
                     $plan = MercadoPago\Invoice.find_by_id($_POST["id"]);
-                    $_SESSION['notify'] = 'Entro a invoice';
+                    // $_SESSION['notify'] = 'Entro a invoice';
                     break;
             }
 
