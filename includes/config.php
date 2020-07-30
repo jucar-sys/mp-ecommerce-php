@@ -21,7 +21,7 @@
     define("PENDING", "http://localhost/mp-ecommerce-php-master/verificador_pp.php?status=pending"); */
     
     // NOTIFICATION
-    define("ENDPOINT", "https://juancarlosgar-mp-ecommerce-php.herokuapp.com/endpoint.php");
+    define("ENDPOINT", "https://juancarlosgar-mp-ecommerce-php.herokuapp.com/endpoint.php?notify=data");
     //define("ENDPOINT", "http://localhost/mp-ecommerce-php-master/endpoint.php?source_news=webhooks");
     
 ?>
