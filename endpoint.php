@@ -36,6 +36,12 @@
         <div class="jumbotron text-center">
             <h1 class="display-4">Obteniendo notificaciones de Mercado Pago...</h1>
             <?php echo $_SESSION['notify']; ?>
+            <?php
+                echo '<pre>';
+                var_dump($_SESSION['notify']);
+                echo '</pre>';
+            ?>
+            <?php print ($_SESSION['notify']); ?>
         </div><!-- .jumbotron -->
     </div><!-- .container -->
     <!-- ----------------------------------------------------- -->
