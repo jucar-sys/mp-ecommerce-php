@@ -4,10 +4,6 @@
     include 'modelo_carrito.php';
 ?>
 
-            <!-- Security de Mercado Pago -->
-            <script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
-            <!-- -------------------------- -->
-
             <div class="as-search-results as-filter-open as-category-landing as-desktop" id="as-search-results">
 
                 <div id="accessories-tab" class="as-accessories-details">
@@ -118,6 +114,9 @@
             </div><!-- .as-search-results as-filter-open as-category-landing as-desktop -->
         </div><!-- .as-search-wrapper -->
 
-<?php
-    include 'templates/footer.php';
-?>
+    <!-- Security de Mercado Pago -->
+    <script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
+    <!-- -------------------------- -->
+    <?php
+        include 'templates/footer.php';
+    ?>

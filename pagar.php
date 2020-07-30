@@ -46,7 +46,7 @@
             $preference = new MercadoPago\Preference();
 
             $preference->external_reference = "jucar.sys@gmail.com";
-            $preference->notification_url = "https://baits.mx/endponit.php?source_news=webhooks";
+            $preference->notification_url = ENDPOINT;
             
             // Datos del comprador
             $payer = new MercadoPago\Payer();

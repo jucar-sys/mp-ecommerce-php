@@ -78,7 +78,10 @@
     ?>
     
 
-    <!-------------------- Fotter, scrips, modales --------------------->
+    <!-------------------------- Fotter --------------------------->
+    <!-- Security de Mercado Pago -->
+    <script src="https://www.mercadopago.com/v2/security.js" view=""></script>
+    <!-- -------------------------- -->
     <?php
         include_once 'templates/footer.php';
     ?>

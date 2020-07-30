@@ -3,9 +3,6 @@
     include 'templates/header.php';
 ?>
 
-            <!-- Security de Mercado Pago -->
-            <script src="https://www.mercadopago.com/v2/security.js" view="home"></script>
-
             <div class="as-search-results as-filter-open as-category-landing as-desktop" id="as-search-results">
 
                 <div id="accessories-tab" class="as-accessories-details">
@@ -529,6 +526,8 @@
             </div><!-- .as-search-results -->
         </div><!-- .as-search-wrapper -->
 
+        <!-- Security de Mercado Pago -->
+        <script src="https://www.mercadopago.com/v2/security.js" view="home"></script>
 <?php
     include 'templates/footer.php';
 ?>
