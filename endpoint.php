@@ -11,7 +11,6 @@
 
             MercadoPago\SDK::setAccessToken(ACC_TOKEN);
             $_SESSION['notify'] = $_POST;
-            echo $_SESSION['notify'];
 
             switch($_POST["type"]) {
                 case "payment":
@@ -36,6 +35,7 @@
     <div class="container my-5">
         <div class="jumbotron text-center">
             <h1 class="display-4">Obteniendo notificaciones de Mercado Pago...</h1>
+            <?php echo $_SESSION['notify']; ?>
         </div><!-- .jumbotron -->
     </div><!-- .container -->
     <!-- ----------------------------------------------------- -->
