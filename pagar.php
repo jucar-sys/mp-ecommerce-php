@@ -59,7 +59,7 @@
                 "street_number" => $numeroExt,
                 "zip_code" => $cp
             );
-            $payer->save();
+            $preference->payer = $payer;
             // ......................... //
 
             // Crea un ítem en la preferencia
