@@ -61,6 +61,12 @@
                 </tbody>
             </table><!-- .table -->
 
+                <form action="pagar.php" method="post" class="my-5">
+                    <div class="text-center my-5">
+                        <button class="btn btn-primary btn-lg my-4" type="submit" name="btnAccion" value="mp">Continuar</button></br>
+                    </div><!-- .text-center -->
+                </form><!-- /form pagar -->
+
             <?php }else { ?>
                 <div class="alert alert-info" role="alert">
                     No hay productos en el carrito. Vé a la tienda y agrega algunos...
