@@ -4,6 +4,91 @@
     include 'modelo_carrito.php';
 ?>
 
+            <!-- -------------------- CONTENIDO ---------------------- -->
+    <?php
+        if($_POST){
+            $id = $_POST['id_prod'];
+            $nombre = $_POST['title'];
+            $img = $_POST['img'];
+            $precio = $_POST['price'];
+            $cantidad = $_POST['unit'];
+
+            // DATOS
+            date_default_timezone_set("America/Mexico_City");
+            $fecha = date("Y-m-d H:i:s");
+
+
+            // ------------------- INTEGRACION DE MERCADO PAGO -------------------- //
+            // SDK de Mercado Pago
+            require __DIR__ .  '/vendor/autoload.php';
+            
+            // Agrega credenciales
+            MercadoPago\SDK::setAccessToken(ACC_TOKEN);
+            // Integrator ID
+            MercadoPago\SDK::setIntegratorId(INTEGRATOR_ID);
+            // Crea un objeto de preferencia
+            $preference = new MercadoPago\Preference();
+
+            $preference->external_reference = "jucar.sys@gmail.com";
+            $preference->notification_url = ENDPOINT;
+            
+            // Datos del comprador
+            $payer = new MercadoPago\Payer();
+            $payer->name = "Lalo Landa";
+            $payer->email = "test_user_58295862@testuser.com";
+            $payer->phone = array(
+                "area_code" => "52",
+                "number" => "5549737300"
+            );
+            $payer->address = array(
+                "street_name" => "Insurgentes Sur",
+                "street_number" => "1602",
+                "zip_code" => "03940"
+            );
+            // ......................... //
+
+            // Crea un ítem en la preferencia
+            $item = new MercadoPago\Item();
+            $item->id = $id;
+            $item->title = $nombre;
+            $item->description = "Dispositivo móvil de Tienda e-commerce";
+            $item->picture_url = URLIMG.$img;
+            $item->quantity = 1;
+            $item->unit_price = $precio;
+            // $item->currency_id = "MXN";
+
+
+            // Integramos el item a la lista de items
+            $preference->items = array($item);
+            //.........................//
+            
+            // Links de retorno despues del pago según el resultado
+            $preference->back_urls = array(
+                "success" => SUCCESS,
+                "failure" => FAILURE,
+                "pending" => PENDING
+            );
+            $preference->auto_return = "approved";
+
+            /* Definicon de medios de pago */
+            $preference->payment_methods = array(
+                "excluded_payment_methods" => array(
+                    array("id" => "amex")
+                ),
+                "excluded_payment_types" => array(
+                    array("id" => "atm")
+                ),
+                "installments" => 6
+            );
+            // ...============================
+
+            $preference->save();
+            // .........................................
+            /* ------------------------------------------------------------------------------------- */
+        }
+
+    ?>  
+
             <div class="as-search-results as-filter-open as-category-landing as-desktop" id="as-search-results">
 
                 <div id="accessories-tab" class="as-accessories-details">
@@ -29,27 +114,6 @@
                             </div>
                         </div>
                         
-                        <!-- ----------------- Mensaje --------------------- -->
-                        <div class="container">
-                            <br>
-                            <?php if($mensaje != '') { ?>
-                                <div class="alert alert-success" role="alert">
-                                    <?php echo ($mensaje); ?>
-                                </div><!-- .alert -->
-                            <?php } ?>
-                        </div><!-- .container -->
-                        <!-- ---------------------------------------------- -->
-
-                        <!-- ==================== Accesorio mostrado ======================= -->
-                        <div class="as-accessories-results as-search-desktop">
-
-                            <?php
-                                $id = $_POST['id_prod'];
-                                $nombre = $_POST['title'];
-                                $img = $_POST['img'];
-                                $precio = $_POST['price'];
-                                $cantidad = $_POST['unit'];
-                            ?>
 
                             <div class="width:60%">
                                 <div class="as-producttile-tilehero with-paddlenav " style="float:left;">
@@ -89,20 +153,15 @@
                                         </h3>
                                     </div>
 
-                                    <!-- Form para enviar los datos del prod al carrito -->
-                                    <form action="detail.php" method="post">
-                                        <input type="hidden" name="id_prod" id="id_prod" value="<?php echo $id; ?>">
-                                        <input type="hidden" name="title" id="nombre_prod" value="<?php echo $nombre; ?>">
-                                        <input type="hidden" name="descripcion" id="descripcion_prod" value="<?php echo 'Dispositivo móvil de Tienda e-commerce'; ?>">
-                                        <input type="hidden" name="img" id="img_prod" value="<?php echo $img; ?>">
-                                        <input type="hidden" name="unit" id="cantidad_prod" value="<?php echo $cantidad; ?>">
-                                        <input type="hidden" name="price" id="precio_prod" value="<?php echo $precio; ?>">
-                                        <input type="hidden" name="orden_ped" id="orden_pedido" value="<?php echo 'jucar.sys@gmail.com'; ?>">
-
-                                        <button href="#" class="btn btn-primary" name="btnAccion" type="submit" value="agregar"><i class="fas fa-shopping-cart"></i> Agregar</button>
-
-                                    </form><!-- /form -->
-                                    <!-- ---------------------------------------------- -->
+                                    <!-- ----------------------------------------------------- -->
+                                    <div class="container my-5">
+                                        <!--------------- Mercado Pago INTEGRATION ------------>
+                                        <form action="verificador_pp.php" method="POST" class="my-5">
+                                            <div><a href="<?= $preference->init_point ?>" class="mercadopago-button p-3" >Pagar la compra</a></div>
+                                        </form>
+                                        <!-- ----------------------------------------- -->        
+                                    </div><!-- .container -->
+                                    <!-- ----------------------------------------------------- -->
 
                                 </div>
                             </div>
