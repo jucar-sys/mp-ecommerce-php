@@ -7,13 +7,16 @@
 
     <!-- -------------------- CONTENIDO ---------------------- -->
     <?php
-        $resp = 'NO entró al post';
-        $data = json_decode(file_get_contents('php://input'), true);
-        $_SESSION['notify'] = $data;
         if($_POST){
 
             MercadoPago\SDK::setAccessToken(ACC_TOKEN);
-            $resp = 'entró al post';
+            $datos = $_POST;
+              /* Guardamos la información en un archivo de registro */
+              file_put_contents(
+                'registro.log',
+                json_encode($datos) . PHP_EOL,
+                FILE_APPEND
+              );
 
             switch($_POST["type"]) {
                 case "payment":
@@ -42,16 +45,6 @@
     <div class="container my-5">
         <div class="jumbotron text-center">
             <h1 class="display-4">Obteniendo notificaciones de Mercado Pago...</h1>
-            <?php echo $_SESSION['notify']; ?>
-            <?php echo $resp; ?>
-            <?php
-                echo '<pre>';
-                var_dump($_SESSION['notify']);
-                echo $resp;
-                echo '</pre>';
-                ?>
-            <?php print ($_SESSION['notify']); ?>
-            <?php echo $resp; ?>
         </div><!-- .jumbotron -->
     </div><!-- .container -->
     <!-- ----------------------------------------------------- -->
