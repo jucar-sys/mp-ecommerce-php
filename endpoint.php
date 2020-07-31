@@ -7,7 +7,6 @@
 
     <!-- -------------------- CONTENIDO ---------------------- -->
     <?php
-        if($_POST){
 
             MercadoPago\SDK::setAccessToken(ACC_TOKEN);
             $datos = $_POST;
@@ -17,6 +16,11 @@
                 json_encode($datos) . PHP_EOL,
                 FILE_APPEND
               );
+
+            header('Content-Type: application/json');
+            $request = file_get_contents('php://input');
+            $req_dump = print_r( $request, true );
+            $fp = file_put_contents( 'request.log', $req_dump );
 
             switch($_POST["type"]) {
                 case "payment":
@@ -37,7 +41,6 @@
                     break;
             }
 
-        }
 
     ?>  
     
