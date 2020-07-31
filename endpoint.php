@@ -1,64 +1,42 @@
 <?php
-    include_once 'templates/head.php';
-    include_once 'templates/header.php';
-    include_once 'modelo_carrito.php';
-?>
-<!-- -------------------------------------------------------- -->
+    include_once 'includes/config.php';
 
-    <!-- -------------------- CONTENIDO ---------------------- -->
-    <?php
+    // if($_GET){
+    //     file_put_contents(
+    //         'registro.log',
+    //         json_encode($_GET) . PHP_EOL,
+    //         FILE_APPEND
+    //     );
+    // }
 
-            MercadoPago\SDK::setAccessToken(ACC_TOKEN);
-            $datos = $_POST;
-              /* Guardamos la información en un archivo de registro */
-              file_put_contents(
-                'registro.log',
-                json_encode($datos) . PHP_EOL,
-                FILE_APPEND
-              );
+    $body = @file_get_contents('php://input');
+    $data = json_decode($body);
+        
+    file_put_contents(
+        'registro.log',
+        json_encode($data) . PHP_EOL,
+        FILE_APPEND
+    );
 
-            header('Content-Type: application/json');
-            $request = file_get_contents('php://input');
-            $req_dump = print_r( $request, true );
-            $fp = file_put_contents( 'request.log', $req_dump );
+    // SDK de Mercado Pago
+    require __DIR__ .  '/vendor/autoload.php';
+    MercadoPago\SDK::setAccessToken(ACC_TOKEN);
 
-            switch($_POST["type"]) {
-                case "payment":
-                    $payment = MercadoPago\Payment.find_by_id($_POST["id"]);
-                    // $_SESSION['notify'] = 'Entro a payments';
-                break;
-                case "plan":
-                    $plan = MercadoPago\Plan.find_by_id($_POST["id"]);
-                    // $_SESSION['notify'] = 'Entro a plan';
-                break;
-                case "subscription":
-                    $plan = MercadoPago\Subscription.find_by_id($_POST["id"]);
-                    // $_SESSION['notify'] = 'Entro a subscription';
-                break;
-                case "invoice":
-                    $plan = MercadoPago\Invoice.find_by_id($_POST["id"]);
-                    // $_SESSION['notify'] = 'Entro a invoice';
-                    break;
-            }
-
-
-    ?>  
+    switch($_POST["type"]) {
+        case "payment":
+            $payment = MercadoPago\Payment.find_by_id($_POST["id"]);
+        break;
+        case "plan":
+            $plan = MercadoPago\Plan.find_by_id($_POST["id"]);
+        break;
+        case "subscription":
+            $subscription = MercadoPago\Subscription.find_by_id($_POST["id"]);
+        break;
+        case "invoice":
+            $invoice = MercadoPago\Invoice.find_by_id($_POST["id"]);
+            break;
+        default:
+        break;
+    }
     
-    <!-- ----------------------------------------------------- -->
-    <div class="container my-5">
-        <div class="jumbotron text-center">
-            <h1 class="display-4">Obteniendo notificaciones de Mercado Pago...</h1>
-        </div><!-- .jumbotron -->
-    </div><!-- .container -->
-    <!-- ----------------------------------------------------- -->
-
-
-    <!-------------------- Fotter --------------------->
-    <!-- Security de Mercado Pago -->
-    <script src="https://www.mercadopago.com/v2/security.js" view=""></script>
-    <!-- -------------------------- -->
-
-    <?php
-        include_once 'templates/footer.php';
-    ?>
-    <!-- -------------------------------------------------------- -->
+?>  

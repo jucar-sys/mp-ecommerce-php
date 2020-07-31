@@ -13,15 +13,15 @@
     define("COMP_ID", "535650015");
     
     // URL_REDIRECTS
-    define("SUCCESS", "https://juancarlosgar-mp-ecommerce-php.herokuapp.com/verificador_pp.php?status=success");
-    define("FAILURE", "https://juancarlosgar-mp-ecommerce-php.herokuapp.com/verificador_pp.php?status=failure");
-    define("PENDING", "https://juancarlosgar-mp-ecommerce-php.herokuapp.com/verificador_pp.php?status=pending");
+    define("SUCCESS", "https://baits.mx/clientes/mp-ecommerce-php/verificador_pp.php?status=success");
+    define("FAILURE", "https://baits.mx/clientes/mp-ecommerce-php/verificador_pp.php?status=failure");
+    define("PENDING", "https://baits.mx/clientes/mp-ecommerce-php/verificador_pp.php?status=pending");
     /* define("SUCCESS", "http://localhost/mp-ecommerce-php-master/verificador_pp.php?status=success");
     define("FAILURE", "http://localhost/mp-ecommerce-php-master/verificador_pp.php?status=failure");
     define("PENDING", "http://localhost/mp-ecommerce-php-master/verificador_pp.php?status=pending"); */
     
     // NOTIFICATION
-    define("ENDPOINT", "https://juancarlosgar-mp-ecommerce-php.herokuapp.com/endpoint.php?notify=data");
+    define("ENDPOINT", "https://baits.mx/clientes/mp-ecommerce-php/endpoint.php");
     //define("ENDPOINT", "http://localhost/mp-ecommerce-php-master/endpoint.php?source_news=webhooks");
     
 ?>
