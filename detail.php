@@ -90,48 +90,26 @@
 
                         <?php
                             include_once 'config.php';
-
-                            $nombre = $_POST['title'];
-                            $img = $_POST['img'];
-                            $precio = $_POST['price'];
-                            $cantidad = $_POST['unit'];
-
-                            // DATOS
-                            date_default_timezone_set("America/Mexico_City");
-                            $fecha = date("Y-m-d H:i:s");
-
-
-                            // ------------------- INTEGRACION DE MERCADO PAGO -------------------- //
-                            // SDK de Mercado Pago
                             require __DIR__ .  '/vendor/autoload.php';
                             
-                            // Agrega credenciales
                             MercadoPago\SDK::setAccessToken(ACC_TOKEN);
-                            // Integrator ID
                             MercadoPago\SDK::setIntegratorId(INTEGRATOR_ID);
-                            // Crea un objeto de preferencia
+
                             $preference = new MercadoPago\Preference();
 
                             $preference->external_reference = "jucar.sys@gmail.com";
                             $preference->notification_url = ENDPOINT;
-                            
-                            // Crea un ítem en la preferencia
+
                             $item = new MercadoPago\Item();
                             $item->id = "1234";
-                            $item->title = $nombre;
+                            $item->title = $_POST['title'];
                             $item->description = "Dispositivo móvil de Tienda e-commerce";
-                            $item->picture_url = URLIMG.$img;
+                            $item->picture_url = URLIMG.$_POST['img'];
                             $item->quantity = 1;
-                            $item->unit_price = $precio;
-                            // $item->currency_id = "MXN";
+                            $item->unit_price = $_POST['price'];
 
-
-                            // Integramos el item a la lista de items
                             $preference->items = array($item);
-                            //.........................//
 
-                            
-                            // Datos del comprador
                             $payer = new MercadoPago\Payer();
                             $payer->name = "Lalo";
                             $payer->surname = "Landa";
@@ -145,9 +123,7 @@
                                 "street_number" => 1602,
                                 "zip_code" => "03940"
                             );
-                            // ......................... //
-                            
-                            // Links de retorno despues del pago según el resultado
+
                             $preference->back_urls = array(
                                 "success" => SUCCESS,
                                 "failure" => FAILURE,
@@ -155,7 +131,6 @@
                             );
                             $preference->auto_return = "approved";
 
-                            /* Definicon de medios de pago */
                             $preference->payment_methods = array(
                                 "excluded_payment_methods" => array(
                                     array("id" => "amex")
@@ -165,12 +140,8 @@
                                 ),
                                 "installments" => 6
                             );
-                            // ...============================
 
                             $preference->save();
-                            // .........................................
-                            /* ------------------------------------------------------------------------------------- */
-
                         ?>  
 
 
@@ -244,6 +215,7 @@
                 </div>
             </div>
         </div>
-<!-- Security de Mercado Pago -->
+
 <script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
+
 </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div id="ac-gn-viewport-emitter"> </div></body></html>
