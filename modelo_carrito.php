@@ -9,8 +9,8 @@
             /* -------- BOTON AGREGAR A CARRITO --------- */
             case 'agregar':
                 // IF ID
-                if(is_string(openssl_decrypt($_POST['id_prod'], COD, KEY))){
-                    $id = openssl_decrypt($_POST['id_prod'], COD, KEY);
+                if(is_string($_POST['id_prod'])){
+                    $id = $_POST['id_prod'];
                     // $mensaje = 'ID Correcto: '.$id.'</br>';
                 }else {
                     $mensaje = 'ID Incorrecto </br>';
@@ -19,8 +19,8 @@
                 // /IF ID
 
                 // IF NOMBRE
-                if(is_string(openssl_decrypt($_POST['title'], COD, KEY))){
-                    $nombre = openssl_decrypt($_POST['title'], COD, KEY);
+                if(is_string($_POST['title'])){
+                    $nombre = $_POST['title'];
                     // $mensaje .= 'Nombre Correcto: '.$nombre.'</br>';
                 }else {
                     $mensaje .= 'Nombre Incorrecto </br>';
@@ -29,8 +29,8 @@
                 // /IF NOMBRE
 
                 // IF DESCRIPCION
-                if(is_string(openssl_decrypt($_POST['descripcion'], COD, KEY))){
-                    $descripcion = openssl_decrypt($_POST['descripcion'], COD, KEY);
+                if(is_string($_POST['descripcion'])){
+                    $descripcion = $_POST['descripcion'];
                     // $mensaje .= 'descripcion Correcto: '.$descripcion.'</br>';
                 }else {
                     $mensaje .= 'Descripcion Incorrecta </br>';
@@ -39,8 +39,8 @@
                 // /IF DESCRIPCION
 
                 // IF imagen DE ARTICULO MP
-                if(is_string(openssl_decrypt($_POST['img'], COD, KEY))){
-                    $url_img = openssl_decrypt($_POST['img'], COD, KEY);
+                if(is_string($_POST['img'])){
+                    $url_img = $_POST['img'];
                     // $mensaje .= 'url_img Correcto: '.$url_img.'</br>';
                 }else {
                     $mensaje .= 'Imagen Incorrecta </br>';
@@ -50,12 +50,12 @@
                 
                 
                 // IF CANTIDAD
-                if(is_numeric(openssl_decrypt($_POST['unit'], COD, KEY))){
-                    $cantidad = openssl_decrypt($_POST['unit'], COD, KEY);
-                    $mensaje .= 'Cantidad Correcto: '.$cantidad.'</br>';
+                if(is_numeric($_POST['unit'])){
+                    $cantidad = $_POST['unit'];
+                    // $mensaje .= 'Cantidad Correcto: '.$cantidad.'</br>';
                      // IF PRECIO
-                    if(is_string(openssl_decrypt($_POST['price'], COD, KEY))){
-                        $precio = openssl_decrypt($_POST['price'], COD, KEY);
+                    if(is_string($_POST['price'])){
+                        $precio = $_POST['price'];
                         // $mensaje .= 'Precio Correcto: '.$precio.'</br>';
                         $total = $precio * $cantidad;
                         // $mensaje .= 'Precio Total Correcto: '.$total.'</br>';
@@ -72,8 +72,8 @@
 
 
                 // IF orden_ped
-                if(is_string(openssl_decrypt($_POST['orden_ped'], COD, KEY))){
-                    $orden_ped = openssl_decrypt($_POST['orden_ped'], COD, KEY);
+                if(is_string($_POST['orden_ped'])){
+                    $orden_ped = $_POST['orden_ped'];
                     // $mensaje .= 'orden_ped Correcto: '.$orden_ped.'</br>';
                 }else {
                     $mensaje .= 'Orden Incorrecta </br>';
@@ -141,8 +141,8 @@
             /* -------- BOTON ELIMINAR DE CARRITO --------- */
             case 'eliminar':
                 // IF ID
-                if(is_string(openssl_decrypt($_POST['id'], COD, KEY))){
-                    $id = openssl_decrypt($_POST['id'], COD, KEY);
+                if(is_string($_POST['id'])){
+                    $id = $_POST['id'];
 
                     // Eliminamos el registro de la variable de sesion
                     foreach ($_SESSION['carrito'] as $index => $producto) {

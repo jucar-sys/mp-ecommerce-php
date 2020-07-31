@@ -60,69 +60,6 @@
                     <!-- /footer -->
                 </tbody>
             </table><!-- .table -->
-                            <!-- Formulario de datos cliente -->
-            <hr>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <!-- Formulario de datos cliente-->
-                    
-                    <!-- Formulario de datos -->
-                    <form action="pagar.php" method="post" class="my-5">
-                        <h3>Datos de contacto:</h3>
-                        <div class="form-group">
-                            <label for="nombre_carrito">Nombre Completo</label>
-                            <input id="nombre_carrito" class="form-control" type="text" name="nombre" placeholder="Escribe tu nombre completo" value="Lalo Landa" required>
-                        </div><!-- .from-group -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="email_carrito">Correo de contacto</label>
-                                    <input id="email_carrito" class="form-control" type="email" name="email" placeholder="Escribe tu correo electrónico" value="test_user_58295862@testuser.com" required>
-                                </div><!-- .from-group -->
-                            </div><!-- .col-md-6 -->
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="telefono_carrito">Teléfono de contacto</label>
-                                    <input id="telefono_carrito" class="form-control" type="text" name="telefono" placeholder="Escribe tu teléfono de contacto" maxlength="10" value="5549737300" required>
-                                </div><!-- .from-group -->
-                            </div><!-- .col-md-6 -->
-                        </div><!-- .row -->
-
-                        <!-- DIRECCION -->
-                        <hr class="my-5">
-                        <h3>Datos de envío:</h3>
- 
-                            <div class="form-group">
-                                <label for="calle_carrito">Calle</label>
-                                <input id="calle_carrito" class="form-control" type="text" name="calle" placeholder="Calle" value="Insurgentes Sur" required>
-                            </div><!-- .from-group -->
-
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="ext_carrito"># Ext</label>
-                                        <input id="ext_carrito" class="form-control" type="text" name="ext" placeholder="# Exterior" maxlength="10" value="1602" required>
-                                    </div><!-- .from-group -->
-                                </div><!-- .col-6 -->
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="cp_carrito">C.P.</label>
-                                        <input id="cp_carrito" class="form-control" type="text" name="cp" placeholder="C.P." maxlength="5" value="03940" required>
-                                    </div><!-- .from-group -->
-                                </div><!-- .col-6 -->
-                            </div><!-- .row -->
-
-                        <div class="text-center my-5">
-                            <button class="btn btn-primary btn-lg my-4" type="submit" name="btnAccion" value="mp">Continuar</button></br>
-                        </div><!-- .text-center -->
-                    </form><!-- /form pagar -->
-                    <!-- ........................................ -->
-
-                    <!-- /Formulario de datos cliente -->
-                    <!-- ........................................ -->
-                    </div><!-- .col-md-8 -->
-                </div><!-- .row -->
-        <!-- /Formulario de datos cliente -->
 
             <?php }else { ?>
                 <div class="alert alert-info" role="alert">

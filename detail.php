@@ -44,11 +44,11 @@
                         <div class="as-accessories-results as-search-desktop">
 
                             <?php
-                                $id = openssl_decrypt($_POST['id_prod'], COD, KEY);
-                                $nombre = openssl_decrypt($_POST['title'], COD, KEY);
-                                $img = openssl_decrypt($_POST['img'], COD, KEY);
-                                $precio = openssl_decrypt($_POST['price'], COD, KEY);
-                                $cantidad = openssl_decrypt($_POST['unit'], COD, KEY);
+                                $id = $_POST['id_prod'];
+                                $nombre = $_POST['title'];
+                                $img = $_POST['img'];
+                                $precio = $_POST['price'];
+                                $cantidad = $_POST['unit'];
                             ?>
 
                             <div class="width:60%">
@@ -91,13 +91,13 @@
 
                                     <!-- Form para enviar los datos del prod al carrito -->
                                     <form action="detail.php" method="post">
-                                        <input type="hidden" name="id_prod" id="id_prod" value="<?php echo openssl_encrypt($id, COD, KEY); ?>">
-                                        <input type="hidden" name="title" id="nombre_prod" value="<?php echo openssl_encrypt($nombre, COD, KEY); ?>">
-                                        <input type="hidden" name="descripcion" id="descripcion_prod" value="<?php echo openssl_encrypt('Dispositivo móvil de Tienda e-commerce', COD, KEY); ?>">
-                                        <input type="hidden" name="img" id="img_prod" value="<?php echo openssl_encrypt($img, COD, KEY); ?>">
-                                        <input type="hidden" name="unit" id="cantidad_prod" value="<?php echo openssl_encrypt($cantidad, COD, KEY); ?>">
-                                        <input type="hidden" name="price" id="precio_prod" value="<?php echo openssl_encrypt($precio, COD, KEY); ?>">
-                                        <input type="hidden" name="orden_ped" id="orden_pedido" value="<?php echo openssl_encrypt('jucar.sys@gmail.com', COD, KEY); ?>">
+                                        <input type="hidden" name="id_prod" id="id_prod" value="<?php echo $id; ?>">
+                                        <input type="hidden" name="title" id="nombre_prod" value="<?php echo $nombre; ?>">
+                                        <input type="hidden" name="descripcion" id="descripcion_prod" value="<?php echo 'Dispositivo móvil de Tienda e-commerce'; ?>">
+                                        <input type="hidden" name="img" id="img_prod" value="<?php echo $img; ?>">
+                                        <input type="hidden" name="unit" id="cantidad_prod" value="<?php echo $cantidad; ?>">
+                                        <input type="hidden" name="price" id="precio_prod" value="<?php echo $precio; ?>">
+                                        <input type="hidden" name="orden_ped" id="orden_pedido" value="<?php echo 'jucar.sys@gmail.com'; ?>">
 
                                         <button href="#" class="btn btn-primary" name="btnAccion" type="submit" value="agregar"><i class="fas fa-shopping-cart"></i> Agregar</button>
 

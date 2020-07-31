@@ -205,11 +205,11 @@
                                             </div>
                                         </div>
                                         <form action="detail.php" method="get">
-                                            <input type="hidden" name="id_prod" value="<?php echo openssl_encrypt('PTMP001', COD, KEY); ?>">
-                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('img/samsung-galaxy-s9-xxl.jpg', COD, KEY); ?>">
-                                            <input type="hidden" name="title" value="<?php echo openssl_encrypt('Samsung Galaxy S9', COD, KEY); ?>">
-                                            <input type="hidden" name="price" value="<?php echo openssl_encrypt('15000', COD, KEY); ?>">
-                                            <input type="hidden" name="unit" value="<?php echo openssl_encrypt('1', COD, KEY); ?>">
+                                            <input type="hidden" name="id_prod" value="1234">
+                                            <input type="hidden" name="img" value="img/samsung-galaxy-s9-xxl.jpg">
+                                            <input type="hidden" name="title" value="Samsung Galaxy S9">
+                                            <input type="hidden" name="price" value="15000">
+                                            <input type="hidden" name="unit" value="1">
                                             <button type="submit" class="mercadopago-button" formmethod="post">Comprar</button>
                                         </form>
                                     </div>
@@ -264,11 +264,11 @@
                                             </div>
                                         </div>
                                         <form action="detail.php" method="get">
-                                            <input type="hidden" name="id_prod" value="<?php echo openssl_encrypt('PTMP002', COD, KEY); ?>">
-                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('img/l6g6.jpg', COD, KEY); ?>">
-                                            <input type="hidden" name="title" value="<?php echo openssl_encrypt('LG G6', COD, KEY); ?>">
-                                            <input type="hidden" name="price" value="<?php echo openssl_encrypt('10000', COD, KEY); ?>">
-                                            <input type="hidden" name="unit" value="<?php echo openssl_encrypt('1', COD, KEY); ?>">
+                                            <input type="hidden" name="id_prod" value="1234">
+                                            <input type="hidden" name="img" value="img/l6g6.jpg">
+                                            <input type="hidden" name="title" value="LG G6">
+                                            <input type="hidden" name="price" value="10000">
+                                            <input type="hidden" name="unit" value="1">
                                             <button type="submit" class="mercadopago-button" formmethod="post">Comprar</button>
                                         </form>
                                     </div>
@@ -327,11 +327,11 @@
                                         </div>
 
                                         <form action="detail.php" method="get">
-                                            <input type="hidden" name="id_prod" value="<?php echo openssl_encrypt('PTMP003', COD, KEY); ?>">
-                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('img/u_10168742.jpg', COD, KEY); ?>">
-                                            <input type="hidden" name="title" value="<?php echo openssl_encrypt('iPhone 8', COD, KEY); ?>">
-                                            <input type="hidden" name="price" value="<?php echo openssl_encrypt('16000', COD, KEY); ?>">
-                                            <input type="hidden" name="unit" value="<?php echo openssl_encrypt('1', COD, KEY); ?>">
+                                            <input type="hidden" name="id_prod" value="1234">
+                                            <input type="hidden" name="img" value="img/u_10168742.jpg">
+                                            <input type="hidden" name="title" value="iPhone 8">
+                                            <input type="hidden" name="price" value="16000">
+                                            <input type="hidden" name="unit" value="1">
                                             <button type="submit" class="mercadopago-button" formmethod="post">Comprar</button>
                                         </form>
 
@@ -390,11 +390,11 @@
                                         </div>
 
                                         <form action="detail.php" method="get">
-                                            <input type="hidden" name="id_prod" value="<?php echo openssl_encrypt('PTMP004', COD, KEY); ?>">
-                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('img/motorola-moto-g5-plus-1.jpg', COD, KEY); ?>">
-                                            <input type="hidden" name="title" value="<?php echo openssl_encrypt('Motorola G5', COD, KEY); ?>">
-                                            <input type="hidden" name="price" value="<?php echo openssl_encrypt('9000', COD, KEY); ?>">
-                                            <input type="hidden" name="unit" value="<?php echo openssl_encrypt('1', COD, KEY); ?>">
+                                            <input type="hidden" name="id_prod" value="1234">
+                                            <input type="hidden" name="img" value="img/motorola-moto-g5-plus-1.jpg">
+                                            <input type="hidden" name="title" value="Motorola G5">
+                                            <input type="hidden" name="price" value="9000">
+                                            <input type="hidden" name="unit" value="1">
                                             <button type="submit" class="mercadopago-button" formmethod="post">Comprar</button>
                                         </form>
 
@@ -446,11 +446,11 @@
                                         </div>
 
                                         <form action="detail.php" method="get">
-                                            <input type="hidden" name="id_prod" value="<?php echo openssl_encrypt('PTMP005', COD, KEY); ?>">
-                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('img/motorola-moto-g4-3.jpg', COD, KEY); ?>">
-                                            <input type="hidden" name="title" value="<?php echo openssl_encrypt('Moto G4', COD, KEY); ?>">
-                                            <input type="hidden" name="price" value="<?php echo openssl_encrypt('8000', COD, KEY); ?>">
-                                            <input type="hidden" name="unit" value="<?php echo openssl_encrypt('1', COD, KEY); ?>">
+                                            <input type="hidden" name="id_prod" value="1234">
+                                            <input type="hidden" name="img" value="img/motorola-moto-g4-3.jpg">
+                                            <input type="hidden" name="title" value="Moto G4">
+                                            <input type="hidden" name="price" value="8000">
+                                            <input type="hidden" name="unit" value="1">
                                             <button type="submit" class="mercadopago-button" formmethod="post">Comprar</button>
                                         </form>
 
@@ -497,11 +497,11 @@
                                         </div>
 
                                         <form action="detail.php" method="get">
-                                            <input type="hidden" name="id_prod" value="<?php echo openssl_encrypt('PTMP006', COD, KEY); ?>">
-                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('img/003.jpg', COD, KEY); ?>">
-                                            <input type="hidden" name="title" value="<?php echo openssl_encrypt('Sony Xperia XZ2', COD, KEY); ?>">
-                                            <input type="hidden" name="price" value="<?php echo openssl_encrypt('10000', COD, KEY); ?>">
-                                            <input type="hidden" name="unit" value="<?php echo openssl_encrypt('1', COD, KEY); ?>">
+                                            <input type="hidden" name="id_prod" value="1234">
+                                            <input type="hidden" name="img" value="img/003.jpg">
+                                            <input type="hidden" name="title" value="Sony Xperia XZ2">
+                                            <input type="hidden" name="price" value="10000">
+                                            <input type="hidden" name="unit" value="1">
                                             <button type="submit" class="mercadopago-button" formmethod="post">Comprar</button>
                                         </form>
 

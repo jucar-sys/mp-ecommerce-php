@@ -13,13 +13,6 @@
             date_default_timezone_set("America/Mexico_City");
             $fecha = date("Y-m-d H:i:s");
 
-            $cliente = $_POST['nombre'];
-            $correo = $_POST['email'];
-            $telefono = $_POST['telefono'];
-            $calle = $_POST['calle'];
-            $numeroExt = $_POST['ext'];
-            $cp = $_POST['cp'];
-
             // Inicializamos las variables
             $items = array ();
             $total = 0;
@@ -46,18 +39,18 @@
             
             // Datos del comprador
             $payer = new MercadoPago\Payer();
-            $payer->name = $cliente;
+            $payer->name = "Lalo Landa";
             $payer->surname = "";
-            $payer->email = $correo;
+            $payer->email = "test_user_58295862@testuser.com";
             $payer->date_created = $fecha;
             $payer->phone = array(
-                "area_code" => "+52",
-                "number" => $telefono
+                "area_code" => "52",
+                "number" => "5549737300"
             );
             $payer->address = array(
-                "street_name" => $calle,
-                "street_number" => $numeroExt,
-                "zip_code" => $cp
+                "street_name" => "Insurgentes Sur",
+                "street_number" => "1602",
+                "zip_code" => "03940"
             );
             // ......................... //
 
