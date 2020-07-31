@@ -34,16 +34,17 @@
             
             // Datos del comprador
             $payer = new MercadoPago\Payer();
-            $payer->name = "Lalo Landa";
+            $payer->name = "Lalo";
+            $payer->surname = "Landa";
             $payer->email = "test_user_58295862@testuser.com";
             $payer->phone = array(
                 "area_code" => "52",
-                "number" => "5549737300"
+                "number" => "49737300"
             );
             $payer->address = array(
-                "street_name" => "Insurgentes Sur",
-                "street_number" => "1602",
-                "zip_code" => "03940"
+                "street_name" => "False",
+                "street_number" => "123",
+                "zip_code" => "1111"
             );
             // ......................... //
 
