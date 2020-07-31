@@ -24,15 +24,11 @@
             $items = array ();
             $total = 0;
 
-            // echo('Tomo variables');
-
             // Recorremos nuestro carrito y vamos sumando los totales
             foreach ($_SESSION['carrito'] as $index => $producto) {
                 // Obtenemos el total del carrito
                 $total = $total + ($producto['precio_unitario'] * $producto['cantidad']);
             }
-
-            // echo('Sumó el total: '.$total);
 
             // ------------------- INTEGRACION DE MERCADO PAGO -------------------- //
             // SDK de Mercado Pago
@@ -71,6 +67,7 @@
                 $item = new MercadoPago\Item();
                 $item->id = $producto['id'];
                 $item->title = $producto['nombre'];
+                $item->picture_url = URLIMG.$producto['url_img'];
                 $item->description = $producto['descripcion'];
                 $item->category_id = 'phones';
                 $item->quantity = $producto['cantidad'];

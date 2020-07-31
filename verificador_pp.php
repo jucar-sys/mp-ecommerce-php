@@ -12,6 +12,8 @@
             $idPago = $_GET['collection_id'];
             $referenciaExterna = $_GET['external_reference'];
             $metodoPago = $_GET['payment_type'];
+            $preference = $_GET['preference_id'];
+            $site_id = $_GET['site_id'];
 
             /* ================================== MERCADO PAGO ================================== */
                 if($_GET['status'] == 'success'){
@@ -29,8 +31,11 @@
                                     <li><b>ID del Pago: </b><?php echo $idPago; ?></li>
                                     <li><b>Referencia Externa: </b><?php echo $referenciaExterna; ?></li>
                                     <li><b>Método de pago: </b><?php echo $metodoPago; ?></li>
+                                    <li><b>Preference ID: </b><?php echo $preference; ?></li>
+                                    <li><b>ID del sitio: </b><?php echo $site_id; ?></li>
                                 </ul>
-                                <p>Dudas: <strong><b>contacto@mail.mx</b></strong></p>
+                                <p>Dudas: <strong><b>contacto@mail.mx</b></strong></p><br>
+                                <a href="index.php" class="btn btn-outline-primary btn-lg mt-4">Regresar</a>
                         </div><!-- .jumbotron -->
                     </div><!-- .container -->
                     <!-- ----------------------------------------------------- -->

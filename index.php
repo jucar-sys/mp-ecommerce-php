@@ -169,12 +169,12 @@
                                     <div class="as-producttile-tilehero with-paddlenav with-paddlenav-onhover">
                                         <div class="as-dummy-container as-dummy-img">
 
-                                            <img src="./img/samsung-galaxy-s9-xxl.jpg" class="ir ir item-image as-producttile-image  " alt="" width="445" height="445">
+                                            <img src="img/samsung-galaxy-s9-xxl.jpg" class="ir ir item-image as-producttile-image  " alt="" width="445" height="445">
                                         </div>
                                         <div class="images mini-gallery gal1 ">
                                             <ul class="clearfix as-producttile-nojs">
                                                 <li class="as-searchtile-nojs">
-                                                    <img src="./img/samsung-galaxy-s9-xxl.jpg" class="ir relatedlink item-image as-producttile-image" alt="" width="445" height="445" data-scale-params-2="wid=890&amp;hei=890&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1502831144597">
+                                                    <img src="img/samsung-galaxy-s9-xxl.jpg" class="ir relatedlink item-image as-producttile-image" alt="" width="445" height="445" data-scale-params-2="wid=890&amp;hei=890&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1502831144597">
                                                 </li>
                                             </ul>
 
@@ -182,7 +182,7 @@
                                                 <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="2|Beats Studio3 Wireless Over‑Ear Headphones - Shadow Gray|MQUF2">
                                                     <div class="as-tilegallery-element as-image-selected">
                                                         <div class=""></div>
-                                                        <img src="./img/samsung-galaxy-s9-xxl.jpg" class="ir ir item-image as-producttile-image" alt="" data-desc="Samsung galaxy" style="content:-webkit-image-set(url(https://md6.pricebaba.com/images/product/mobile/46638/samsung-galaxy-s9-xxl.jpg">
+                                                        <img src="img/samsung-galaxy-s9-xxl.jpg" class="ir ir item-image as-producttile-image" alt="" data-desc="Samsung galaxy" style="content:-webkit-image-set(url(https://md6.pricebaba.com/images/product/mobile/46638/samsung-galaxy-s9-xxl.jpg">
                                                     </div>
                                                     
                                                 </div>
@@ -206,7 +206,7 @@
                                         </div>
                                         <form action="detail.php" method="get">
                                             <input type="hidden" name="id_prod" value="<?php echo openssl_encrypt('PTMP001', COD, KEY); ?>">
-                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('./img/samsung-galaxy-s9-xxl.jpg', COD, KEY); ?>">
+                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('img/samsung-galaxy-s9-xxl.jpg', COD, KEY); ?>">
                                             <input type="hidden" name="title" value="<?php echo openssl_encrypt('Samsung Galaxy S9', COD, KEY); ?>">
                                             <input type="hidden" name="price" value="<?php echo openssl_encrypt('15000', COD, KEY); ?>">
                                             <input type="hidden" name="unit" value="<?php echo openssl_encrypt('1', COD, KEY); ?>">
@@ -221,7 +221,7 @@
                                     <div class="as-producttile-tilehero with-paddlenav with-paddlenav-onhover">
                                         <div class="as-dummy-container as-dummy-img">
 
-                                            <img src="./img/l6g6.jpg" class="ir ir item-image as-producttile-image " alt="" width="445" height="445">
+                                            <img src="img/l6g6.jpg" class="ir ir item-image as-producttile-image " alt="" width="445" height="445">
                                         </div>
                                         <div class="images mini-gallery gal2 ">
 
@@ -229,7 +229,7 @@
                                                 <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="3|BeatsX Earphones - UNDEFEATED Limited Edition - Camo|MQD92">
                                                     <div class="as-tilegallery-element as-image-selected">
                                                         <div class=""></div>
-                                                        <img src="./img/l6g6.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" data-desc="LG G6" style="">
+                                                        <img src="img/l6g6.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" data-desc="LG G6" style="">
                                                     </div>
                                                     
                                                 </div>
@@ -265,7 +265,7 @@
                                         </div>
                                         <form action="detail.php" method="get">
                                             <input type="hidden" name="id_prod" value="<?php echo openssl_encrypt('PTMP002', COD, KEY); ?>">
-                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('./img/l6g6.jpg', COD, KEY); ?>">
+                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('img/l6g6.jpg', COD, KEY); ?>">
                                             <input type="hidden" name="title" value="<?php echo openssl_encrypt('LG G6', COD, KEY); ?>">
                                             <input type="hidden" name="price" value="<?php echo openssl_encrypt('10000', COD, KEY); ?>">
                                             <input type="hidden" name="unit" value="<?php echo openssl_encrypt('1', COD, KEY); ?>">
@@ -280,7 +280,7 @@
                                     <div class="as-producttile-tilehero with-paddlenav with-paddlenav-onhover">
                                         <div class="as-dummy-container as-dummy-img">
 
-                                            <img src="./img/Screen Shot 2017-11-01 at 13.01.54.png" class="ir ir item-image as-producttile-image  " alt="" width="445" height="445">
+                                            <img src="img/Screen Shot 2017-11-01 at 13.01.54.png" class="ir ir item-image as-producttile-image  " alt="" width="445" height="445">
                                         </div>
                                         <div class="images mini-gallery gal0 ">
                                             <ul class="clearfix as-producttile-nojs">
@@ -293,11 +293,11 @@
                                                 <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="1|AirPods|MMEF2" style="left: 0px;">
                                                     <div class="as-tilegallery-element as-image-selected">
                                                         <div class=""></div>
-                                                        <img src="./img/Screen Shot 2017-11-01 at 13.01.54.png" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" data-desc="AirPods - Image 1 ">
+                                                        <img src="img/Screen Shot 2017-11-01 at 13.01.54.png" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" data-desc="AirPods - Image 1 ">
                                                     </div>
                                                     <div class="as-tilegallery-element">
                                                         <div class=""></div>
-                                                        <img src="./img/u_10168742.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445">
+                                                        <img src="img/u_10168742.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445">
                                                     </div>
                                                 </div>
                                             </div>
@@ -328,7 +328,7 @@
 
                                         <form action="detail.php" method="get">
                                             <input type="hidden" name="id_prod" value="<?php echo openssl_encrypt('PTMP003', COD, KEY); ?>">
-                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('./img/u_10168742.jpg', COD, KEY); ?>">
+                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('img/u_10168742.jpg', COD, KEY); ?>">
                                             <input type="hidden" name="title" value="<?php echo openssl_encrypt('iPhone 8', COD, KEY); ?>">
                                             <input type="hidden" name="price" value="<?php echo openssl_encrypt('16000', COD, KEY); ?>">
                                             <input type="hidden" name="unit" value="<?php echo openssl_encrypt('1', COD, KEY); ?>">
@@ -353,7 +353,7 @@
                                                 <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="4|BeatsX Earphones - Matte Silver|MR3J2">
                                                     <div class="as-tilegallery-element as-image-selected">
                                                         <div class=""></div>
-                                                        <img src="./img/motorola-moto-g5-plus-1.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" data-desc="BeatsX Earphones - Matte Silver - Image 1 " style="content:-webkit-image-set(url(https://cdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g5-plus-1.jpg) 1x);">
+                                                        <img src="img/motorola-moto-g5-plus-1.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" data-desc="BeatsX Earphones - Matte Silver - Image 1 " style="content:-webkit-image-set(url(https://cdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g5-plus-1.jpg) 1x);">
                                                     </div>
                                                     
                                                 </div>
@@ -391,7 +391,7 @@
 
                                         <form action="detail.php" method="get">
                                             <input type="hidden" name="id_prod" value="<?php echo openssl_encrypt('PTMP004', COD, KEY); ?>">
-                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('./img/motorola-moto-g5-plus-1.jpg', COD, KEY); ?>">
+                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('img/motorola-moto-g5-plus-1.jpg', COD, KEY); ?>">
                                             <input type="hidden" name="title" value="<?php echo openssl_encrypt('Motorola G5', COD, KEY); ?>">
                                             <input type="hidden" name="price" value="<?php echo openssl_encrypt('9000', COD, KEY); ?>">
                                             <input type="hidden" name="unit" value="<?php echo openssl_encrypt('1', COD, KEY); ?>">
@@ -412,7 +412,7 @@
                                         <div class="images mini-gallery gal4 ">
                                             <ul class="clearfix as-producttile-nojs">
                                                 <li class="as-searchtile-nojs">
-                                                    <img src="./img/motorola-moto-g4-3.jpg" class="ir relatedlink item-image as-producttile-image" alt="" width="445" height="445" data-scale-params-2="wid=890&amp;hei=890&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1524778255945">
+                                                    <img src="img/motorola-moto-g4-3.jpg" class="ir relatedlink item-image as-producttile-image" alt="" width="445" height="445" data-scale-params-2="wid=890&amp;hei=890&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1524778255945">
                                                 </li>
                                             </ul>
 
@@ -420,7 +420,7 @@
                                                 <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="5|Beats Solo3 Wireless On-Ear Headphones - Neighborhood Collection - Break Blue|MQ392">
                                                     <div class="as-tilegallery-element as-image-selected">
                                                         <div class=""></div>
-                                                        <img src="./img/motorola-moto-g4-3.jpg" class="ir ir item-image as-producttile-image" style="content:-webkit-image-set(url(https://cdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g4-3.jpg) 1x);">
+                                                        <img src="img/motorola-moto-g4-3.jpg" class="ir ir item-image as-producttile-image" style="content:-webkit-image-set(url(https://cdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g4-3.jpg) 1x);">
                                                     </div>
                                                     
                                                 </div>
@@ -447,7 +447,7 @@
 
                                         <form action="detail.php" method="get">
                                             <input type="hidden" name="id_prod" value="<?php echo openssl_encrypt('PTMP005', COD, KEY); ?>">
-                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('./img/motorola-moto-g4-3.jpg', COD, KEY); ?>">
+                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('img/motorola-moto-g4-3.jpg', COD, KEY); ?>">
                                             <input type="hidden" name="title" value="<?php echo openssl_encrypt('Moto G4', COD, KEY); ?>">
                                             <input type="hidden" name="price" value="<?php echo openssl_encrypt('8000', COD, KEY); ?>">
                                             <input type="hidden" name="unit" value="<?php echo openssl_encrypt('1', COD, KEY); ?>">
@@ -472,7 +472,7 @@
                                                 <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="6|Powerbeats3 Wireless Earphones - Neighborhood Collection - Brick Red|MPXP2">
                                                     <div class="as-tilegallery-element as-image-selected">
                                                         <div class=""></div>
-                                                        <img src="./img/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(https://news.mynavi.jp/article/20180416-xperia-next/images/003.jpg) 1x);">
+                                                        <img src="img/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(https://news.mynavi.jp/article/20180416-xperia-next/images/003.jpg) 1x);">
                                                     </div>   
                                                 </div>                     
                                             </div>
@@ -498,7 +498,7 @@
 
                                         <form action="detail.php" method="get">
                                             <input type="hidden" name="id_prod" value="<?php echo openssl_encrypt('PTMP006', COD, KEY); ?>">
-                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('./img/003.jpg', COD, KEY); ?>">
+                                            <input type="hidden" name="img" value="<?php echo openssl_encrypt('img/003.jpg', COD, KEY); ?>">
                                             <input type="hidden" name="title" value="<?php echo openssl_encrypt('Sony Xperia XZ2', COD, KEY); ?>">
                                             <input type="hidden" name="price" value="<?php echo openssl_encrypt('10000', COD, KEY); ?>">
                                             <input type="hidden" name="unit" value="<?php echo openssl_encrypt('1', COD, KEY); ?>">

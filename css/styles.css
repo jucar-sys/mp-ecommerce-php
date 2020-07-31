@@ -15,7 +15,9 @@ a{
 a:hover{
     color: #292929!important;
 }
-
+ul{
+    list-style: none!important;
+}
 /* ============================= */
 
 
