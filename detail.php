@@ -32,22 +32,6 @@
             $preference->external_reference = "jucar.sys@gmail.com";
             $preference->notification_url = ENDPOINT;
             
-            // Datos del comprador
-            $payer = new MercadoPago\Payer();
-            $payer->name = "Lalo";
-            $payer->surname = "Landa";
-            $payer->email = "test_user_58295862@testuser.com";
-            $payer->phone = array(
-                "area_code" => "52",
-                "number" => "49737300"
-            );
-            $payer->address = array(
-                "street_name" => "False",
-                "street_number" => "123",
-                "zip_code" => "1111"
-            );
-            // ......................... //
-
             // Crea un ítem en la preferencia
             $item = new MercadoPago\Item();
             $item->id = $id;
@@ -62,6 +46,23 @@
             // Integramos el item a la lista de items
             $preference->items = array($item);
             //.........................//
+
+            
+            // Datos del comprador
+            $payer = new MercadoPago\Payer();
+            $payer->name = "Lalo";
+            $payer->surname = "Landa";
+            $payer->email = "test_user_58295862@testuser.com";
+            $payer->phone = array(
+                "area_code" => "+52",
+                "number" => "549 737 300"
+            );
+            $payer->address = array(
+                "street_name" => "Insurgentes Sur",
+                "street_number" => 1602,
+                "zip_code" => "03940"
+            );
+            // ......................... //
             
             // Links de retorno despues del pago según el resultado
             $preference->back_urls = array(
